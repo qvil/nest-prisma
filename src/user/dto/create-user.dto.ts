@@ -1,5 +1,10 @@
+import { ApiProperty } from '@nestjs/swagger';
 import { Prisma } from '@prisma/client';
 
-// export type CreateUserDto = Prisma.UserCreateInput;
-// export class CreateUserDto extends Prisma.UserUpdateInput {}
-export class CreateUserDto {}
+export class CreateUserDto implements Prisma.UserCreateInput {
+  @ApiProperty()
+  name?: string | null;
+
+  @ApiProperty()
+  email?: string | null;
+}
