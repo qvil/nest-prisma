@@ -34,6 +34,10 @@ export class UserService {
     return this.prisma.user.findMany();
   }
 
+  // async findAllIncludeDeleted(): Promise<UserModel[]> {
+  //   return this.prisma.user.findMany({ where: { includedDeleted: true } });
+  // }
+
   findOne(
     userWhereUniqueInput: Prisma.UserWhereUniqueInput,
   ): Promise<UserModel | null> {
