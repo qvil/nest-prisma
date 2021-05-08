@@ -7,4 +7,7 @@ export class CreateUserDto implements Prisma.UserCreateInput {
 
   @ApiProperty()
   email?: string | null;
+
+  @ApiProperty()
+  password: string;
 }
